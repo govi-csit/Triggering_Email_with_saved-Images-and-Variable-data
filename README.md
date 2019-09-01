@@ -5,7 +5,7 @@ Instructions:
 3. add 'To Email address' in line no:18 
 3. after running the code, will be expected to receive an email to 'sender email' which contains the same output as shown in ouput.JPG
 
-Expected Issues
+Expected Issues :
 Gmail will not allow to login into gmail account via smtplib due to security purpose, so we will be expected to see the below error
 
 raise SMTPAuthenticationError(code, resp)
