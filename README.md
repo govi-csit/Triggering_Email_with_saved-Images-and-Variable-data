@@ -14,4 +14,3 @@ d. Learn more at\n5.7.8 http://support.google.com/mail/bin/answer.py?answer=1425
 7\n5.7.8 {BADCREDENTIALS} s10sm9426107qam.7 - gsmtp')
 
 To resolve this, enable a flag : "Allow less secure apps: ON"  in security settings. Please refer https://stackoverflow.com/questions/16512592/login-credentials-not-working-with-gmail-smtp for further information.
-    You migh see an error as shown below due to Gmail 
