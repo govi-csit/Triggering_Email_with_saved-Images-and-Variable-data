@@ -1,3 +1,5 @@
+
+
 #import bunch of libraries
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -11,7 +13,7 @@ message = "Thank you"
 
 # setup the parameters of the message
 #From email address
-msg['From'] = "xxxxx.csit@gmail.com"
+msg['From'] = "xxxxx.xxx@gmail.com"
 #From email password
 password = "xxxxx"
 #To email address
