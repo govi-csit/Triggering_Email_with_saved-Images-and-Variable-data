@@ -1,6 +1,5 @@
 
-
-#import bunch of libraries
+#importing libraries
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
@@ -48,12 +47,12 @@ for filename in list_of_images:
     msg_img.add_header('Content-Disposition', 'inline', filename=filename)
     msg.attach(msg_img)
 
-#create server
+#creating server
 server = smtplib.SMTP('smtp.gmail.com: 587')
 server.starttls()
-# Login Credentials for sending the mail
+#login Credentials for sending the mail
 server.login(msg['From'], password)
-# send the message via the server.
+#sending the message via the server.
 server.sendmail(msg['From'], msg['To'], msg.as_string())
 server.quit()
 
