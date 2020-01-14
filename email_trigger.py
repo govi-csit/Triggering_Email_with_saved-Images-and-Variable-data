@@ -47,15 +47,26 @@ for filename in list_of_images:
     msg_img.add_header('Content-Disposition', 'inline', filename=filename)
     msg.attach(msg_img)
 
-#creating server
-server = smtplib.SMTP('smtp.gmail.com: 587')
-server.starttls()
-#login Credentials for sending the mail
-server.login(msg['From'], password)
-#sending the message via the server.
-server.sendmail(msg['From'], msg['To'], msg.as_string())
-server.quit()
-
-print ("successfully sent email to %s:" % (msg['To']))
-
+try:
+    #creating server
+    server = smtplib.SMTP('smtp.gmail.com: 587')
     
+    print("Connecting to SMTP server")
+    server.starttls()
+    print("Connected to SMTP server")
+    
+    #login Credentials for sending the mail
+    server.login(msg['From'], password)
+    #sending the message via the server.
+    server.sendmail(msg['From'], msg['To'], msg.as_string())
+    
+    print ("successfully sent email to %s:" % (msg['To']))
+    
+except Exception as e:
+    print("exception occured while triggering email")
+    print(e)
+
+finally:
+    print("Disconnecting from SMTP server")
+    server.quit()
+    print("Disconnected from SMSTP server")
